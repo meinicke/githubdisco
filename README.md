@@ -1,6 +1,6 @@
 # githubdisco
 
-Discover stuff from GitHub
+Discover stuff in GitHub
 
 # Usage
 
