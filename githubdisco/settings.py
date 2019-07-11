@@ -14,7 +14,7 @@ BOT_NAME = 'githubdisco'
 SPIDER_MODULES = ['githubdisco.spiders']
 NEWSPIDER_MODULE = 'githubdisco.spiders'
 
-# LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'githubdisco-UNALConcordiaResearch (+http://das.encs.concordia.ca)'
@@ -26,20 +26,20 @@ FEED_FORMAT = 'csv'
 # Want this specific order in the csv columns
 # FEED_EXPORT_FIELDS = ['repo_name', 'path', 'language', 'size_bytes', 'library', 'library_language', 'last_commit_ts', 'forked_from'] # toggled_repos
 # FEED_EXPORT_FIELDS = ['repo_name', 'language', 'size_bytes', 'number_of_commits', 'last_commit_ts', 'forked_from', 'number_of_contributors', 'repo_not_found', 'first_commit_sha', 'created_at'] # augmented_toggled_repos
-FEED_EXPORT_FIELDS = ['library', 'repo_name', 'login', 'name', 'email'] # top_contributors
+FEED_EXPORT_FIELDS = ['library', 'repo_name', 'forked', 'name']
 
 # In some unfrequent situations a 403 is returned due to
 # throttling, a couple of retries will be just fine
 RETRY_HTTP_CODES = [500, 502, 503, 504, 408, 403]
-RETRY_TIMES = 10
+RETRY_TIMES = 10000000
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 1
+CONCURRENT_REQUESTS = 2
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+DOWNLOAD_DELAY = 0.25
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16

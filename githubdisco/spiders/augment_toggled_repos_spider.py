@@ -12,10 +12,11 @@ from calendar import timegm
 # $ AUTH_TOKEN=... scrapy crawl augment_toggled_repos -a repos_filename=repositories.csv -o ../results/raw/results-augmented-data-`date -u "+%Y%m%d%H%M%S"`.csv
 
 class AugmentToggledReposSpider(scrapy.Spider):
+
     name = "augment_toggled_repos"
     handle_httpstatus_list = [404]
     headers = {
-        'Authorization': 'Bearer ' + os.environ['AUTH_TOKEN'],
+        'Authorization': 'Bearer ' + os.environ['Github_1'],
     }
     augmented = {}
     max_items_per_page = 100

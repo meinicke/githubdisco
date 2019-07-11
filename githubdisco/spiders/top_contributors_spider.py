@@ -16,7 +16,7 @@ from copy import copy
 class TopContributorsSpider(scrapy.Spider):
     name = "top_contributors"
     headers = {
-        'Authorization': 'Bearer ' + os.environ['AUTH_TOKEN'],
+        'Authorization': 'Bearer ' + os.environ['Github_1'],
     }
 
     TOP_CONTRIBUTORS = 5
